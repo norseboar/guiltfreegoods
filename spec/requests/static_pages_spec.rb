@@ -1,37 +1,32 @@
 require 'spec_helper'
 
 describe "Static Pages" do
-  
+
+  subject { page }
   describe "Home page" do
-    it "should have the correct title" do
-      visit root_path
-      page.should have_selector('title', :text => "Guilt-Free Goods")
-    end
-    it "should have the content 'Guilt-Free Goods'" do
-      visit root_path
-      page.should have_content('Guilt-Free Goods')
-    end
+    before { visit root_path }
+
+    it { should have_selector('h1', text: "Guilt-Free Goods") }
+    it { should have_selector('title', text: full_title('')) }
   end
 
   describe "Help page" do
-    it "should have the correct title" do
-      visit help_path
-      page.should have_selector('title', :text => "Guilt-Free Goods | Help")
-    end
-    it "should have the content 'Help'" do
-      visit help_path
-      page.should have_content('Help')
-    end
+    before { visit help_path }
+
+    it { should have_selector('h1', text: "Help") }
+    it { should have_selector('title', text: full_title('Help')) }
   end
 
   describe "About page" do
-    it "should have the correct title" do
-      visit about_path
-      page.should have_selector('title', :text => "Guilt-Free Goods | About")
-    end
-    it "should have the content 'About'" do
-      visit about_path
-      page.should have_content('About Us')
-    end
+    before { visit about_path }
+
+    it { should have_selector('h1', text: "About") }
+    it { should have_selector('title', text: full_title('About')) }
+  end
+
+  describe "Contact page" do
+    before { visit contact_path }
+    it { should have_selector('h1', text: "Contact Us") }
+    it { should have_selector('title', text: full_title('Contact')) }
   end
 end
