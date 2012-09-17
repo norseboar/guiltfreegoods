@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Guilt-Free Goods | About</title>
+  </head>
+  <body>
+    <h1>About Us</h1>
+    <p>
+      Guilt-Free Goods gives you an easy way to buy from anybody without giving
+      up the causes you believe in. <br/>
+      Here's how it works:<br/>
+      <div id="left_column">
+        <h3>You tell us</h3><br/>
+	what causes you care about<br/>
+     </div>
+     <div id="center_column">
+       <h3>We tell you</h3><br/>
+       when you shop somewhere that undermines those causes<br/>
+     </div>
+     

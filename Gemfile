@@ -4,8 +4,9 @@ gem 'rails', '3.2.8'
 gem 'bootstrap-sass', '2.0.4'
 
 group :development, :test do
-      gem 'sqlite3', '1.3.5'
-      gem 'rspec-rails', '2.11.0'
+#      gem 'sqlite3', '1.3.5'
+#      gem 'rspec-rails', '2.11.0'
+
 end
 
 # Javascript runtime
@@ -26,6 +27,10 @@ group :test do
       gem 'capybara', '1.1.2'
 end
 
+group :production do
+	gem 'mysql2', '0.3.11'
+	gem 'json', '1.7.5'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
